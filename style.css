@@ -130,6 +130,8 @@ span{
     background-image: url(./images/left-1.png);
     border-radius: 10px;
     height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .grid-left-2 p, .grid-left-1 p, .grid-right h4, a{
     background: transparent;
@@ -140,6 +142,8 @@ span{
     background-image: url(./images/left-1.png);
     border-radius: 10px;
     height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .grid-right{
     background-image: url(./images/right.png);
@@ -149,7 +153,14 @@ span{
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.form{
+    margin-top: 120px;
+    background-image: url(./images/form.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 70px;
+}
 
 /* Responcive Area */
 @media screen and (max-width: 576px) {
@@ -160,7 +171,9 @@ span{
     {
         display: flex;
     }
-    .bannar, .plants-lover{
+    .bannar, .plants-lover,
+    .img-grid
+    {
         flex-direction: column;
     }
     .bannar, .bannar-content{
@@ -184,5 +197,9 @@ span{
     }
     .badge{
         display: none;
+    }
+    .grid-left, .grid-right{
+        width: 100%;
+        height: 100%;
     }
 }
