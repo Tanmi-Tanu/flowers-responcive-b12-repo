@@ -1,14 +1,11 @@
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    max-width: 1440px;
     background-color: rgb(245, 248, 255);
 }
 /* Common Section */
 .container{
     max-width: 1140px;
-    margin: auto;
+    margin: 0 auto;
 }
 .display-flex{
     display: flex;
@@ -16,8 +13,20 @@
 h1, h2, h3, h4{
     font-family: "Noto Serif", serif;
 }
-p{
+p, button{
     font-family: "Inter", sans-serif;
+}
+span{
+    color: #E95A08
+}
+.btn{
+    padding: 26px 50px;
+    width: 100%;
+    background-color: #E95A08;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
 }
 /*  */
 .logo-section{
@@ -44,15 +53,35 @@ p{
     font-size: 65px;
     font-weight: 700;
 }
-.bannar-content span{
-    color: #E95A08
-}
 .bannar-content p{
     font-size: 22px;
     font-weight: 400;
     padding-top: 10px;
+    color: rgba(0, 0, 0, 0.50);
 }
 /* Main Section style */
+.our-plants{
+    margin-top: 120px;
+    text-align: center;
+}
+
+.our-plants h2{
+    font-size: 50px;
+    font-weight: 700;
+}
+.cards{
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+    align-content: center;
+    gap: 20px;
+}
+.card{
+    
+}
+
+
 
 /* Responcive Area */
 @media screen and (max-width: 576px) {
@@ -71,5 +100,10 @@ p{
     }
     .bannar img{
         order: 1;
+    }
+
+    /* our plants css*/
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
