@@ -77,10 +77,30 @@ span{
     align-content: center;
     gap: 20px;
 }
-.card{
-    
+.plants-lover{
+    margin-top: 150px;
+    gap: 80px;
 }
-
+.plants-lover-content h2{
+    font-size: 50px;
+    font-weight: 600;
+}
+.plants-lover-content li{
+    font-size: 22px;
+    font-weight: 400;
+}
+.plants-lover-img{
+    position: relative;
+}
+.plant-lover{
+    display: block;
+}
+.badge{
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    background: transparent;
+}
 
 
 /* Responcive Area */
