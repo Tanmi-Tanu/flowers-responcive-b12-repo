@@ -13,7 +13,11 @@
 h1, h2, h3, h4{
     font-family: "Noto Serif", serif;
 }
-p, button{
+p{
+    font-family: "Inter", sans-serif;
+    color: rgba(0, 0, 0, 0.50);
+}
+button{
     font-family: "Inter", sans-serif;
 }
 span{
@@ -52,12 +56,12 @@ span{
 .bannar-content h1{
     font-size: 65px;
     font-weight: 700;
+    margin-bottom: 0;
 }
 .bannar-content p{
     font-size: 22px;
     font-weight: 400;
     padding-top: 10px;
-    color: rgba(0, 0, 0, 0.50);
 }
 /* Main Section style */
 .our-plants{
@@ -68,6 +72,7 @@ span{
 .our-plants h2{
     font-size: 50px;
     font-weight: 700;
+    margin-bottom: 0;
 }
 .cards{
     margin-top: 48px;
@@ -88,6 +93,7 @@ span{
 .plants-lover-content li{
     font-size: 22px;
     font-weight: 400;
+    color: rgba(0, 0, 0, 0.50);
 }
 .plants-lover-img{
     position: relative;
@@ -101,6 +107,48 @@ span{
     right: -100px;
     background: transparent;
 }
+.latest-deals{
+    text-align: center;
+    margin-top: 100px;
+}
+.latest-deals h2{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.img-grid{
+    gap: 28px;
+    margin-top: 100px;
+}
+.grid-left{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 30%;
+}
+.grid-left-1{
+    background-image: url(./images/left-1.png);
+    border-radius: 10px;
+    height: 200px;
+}
+.grid-left-2 p, .grid-left-1 p, .grid-right h4, a{
+    background: transparent;
+    color: white;
+}
+
+.grid-left-2{
+    background-image: url(./images/left-1.png);
+    border-radius: 10px;
+    height: 200px;
+}
+.grid-right{
+    background-image: url(./images/right.png);
+    width: 70%;
+    border-radius: 10px; 
+    height: 425px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 
 /* Responcive Area */
@@ -112,7 +160,7 @@ span{
     {
         display: flex;
     }
-    .bannar{
+    .bannar, .plants-lover{
         flex-direction: column;
     }
     .bannar, .bannar-content{
@@ -122,8 +170,19 @@ span{
         order: 1;
     }
 
-    /* our plants css*/
+    /* Card css*/
     .cards{
         grid-template-columns: repeat(2, 1fr);
+    }
+    /* plants-lover css*/
+    .plants-lover{
+        margin-top: 40px;
+        gap: 0px;
+    }
+    .plant-lover{
+        width: 100%;
+    }
+    .badge{
+        display: none;
     }
 }
