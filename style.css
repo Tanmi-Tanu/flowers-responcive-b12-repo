@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    background-color: rgb(245, 248, 255);
+    /*background-color: rgb(245, 248, 255);*/
 }
 /* Common Section */
 .container{
@@ -16,6 +16,8 @@ h1, h2, h3, h4{
 p{
     font-family: "Inter", sans-serif;
     color: rgba(0, 0, 0, 0.50);
+    font-size: 20px;
+    font-weight: 400;
 }
 button{
     font-family: "Inter", sans-serif;
@@ -58,11 +60,7 @@ span{
     font-weight: 700;
     margin-bottom: 0;
 }
-.bannar-content p{
-    font-size: 22px;
-    font-weight: 400;
-    padding-top: 10px;
-}
+
 /* Main Section style */
 .our-plants{
     margin-top: 120px;
@@ -107,6 +105,7 @@ span{
     right: -100px;
     background: transparent;
 }
+/* Latest Deals Section style */
 .latest-deals{
     text-align: center;
     margin-top: 100px;
@@ -116,36 +115,31 @@ span{
     font-weight: 700;
     margin-bottom: 0;
 }
-.img-grid{
+.grid-container{
+    display: flex;
+    justify-content: space-between;
     gap: 28px;
     margin-top: 100px;
 }
-.grid-left{
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    width: 30%;
-}
-.grid-left-1{
-    background-image: url(./images/left-1.png);
-    border-radius: 10px;
-    height: 200px;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.grid-left-2 p, .grid-left-1 p, .grid-right h4, a{
-    background: transparent;
+.grid-container p, a{
     color: white;
 }
-
-.grid-left-2{
+.grid-container-left{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    width: 30%;
+}
+.left-1{
     background-image: url(./images/left-1.png);
     border-radius: 10px;
     height: 200px;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
-.grid-right{
+.left-2{
+    background-image: url(./images/left-1.png);
+    border-radius: 10px;
+    height: 200px;
+}
+.grid-container-right{
     background-image: url(./images/right.png);
     width: 70%;
     border-radius: 10px; 
@@ -153,13 +147,50 @@ span{
     background-size: cover;
     background-repeat: no-repeat;
 }
+/* Form Area */
 .form{
     margin-top: 120px;
     background-image: url(./images/form.png);
     background-position: center;
     background-size: cover;
     text-align: center;
+    align-items: center;
     padding: 70px;
+}
+.form-int{
+    justify-content: center;
+}
+.form h2, .form-int{
+    background-color: transparent;
+}
+.form h2{
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+.form-int input{
+    border: none;
+    padding: 18px 120px;
+}
+.form-btn{
+    padding: 15px 50px;
+    background-color: #E95A08;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    margin-left: -5px;
+}
+.footer-content{
+    margin-top: 100px;
+    justify-content: space-between;
+}
+.footer-content-2 a, .footer-content-3 a{
+    color: rgb(107, 114, 128);
+}
+.footer-content-2, .footer-content-3{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 }
 
 /* Responcive Area */
@@ -171,8 +202,7 @@ span{
     {
         display: flex;
     }
-    .bannar, .plants-lover,
-    .img-grid
+    .bannar, .plants-lover
     {
         flex-direction: column;
     }
@@ -198,8 +228,19 @@ span{
     .badge{
         display: none;
     }
-    .grid-left, .grid-right{
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-container-left{
+        gap: 10px;
+    }
+    .left-1, .left-2, .grid-container-right{
         width: 100%;
         height: 100%;
+    }
+    .footer-content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
