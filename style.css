@@ -26,7 +26,7 @@ span{
     color: #E95A08
 }
 .btn{
-    padding: 26px 50px;
+    padding: 20px 50px;
     width: 100%;
     background-color: #E95A08;
     color: white;
@@ -49,6 +49,13 @@ span{
 .nav-lists li a{
     text-decoration: none;
     color: #8987A1;
+    transition: all 0.3s ease;
+}
+.nav-lists li a:hover{
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
 }
 .bannar{
     margin-top: 100px;
@@ -80,6 +87,7 @@ span{
     align-content: center;
     gap: 20px;
 }
+/* style */
 .plants-lover{
     margin-top: 150px;
     gap: 80px;
@@ -104,6 +112,17 @@ span{
     top: -100px;
     right: -100px;
     background: transparent;
+    animation: badge-animation 10s linear infinite;
+}
+@keyframes badge-animation {
+    0%{
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(360deg);
+    }
 }
 /* Latest Deals Section style */
 .latest-deals{
@@ -133,11 +152,17 @@ span{
     background-image: url(./images/left-1.png);
     border-radius: 10px;
     height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .left-2{
     background-image: url(./images/left-2.png);
     border-radius: 10px;
     height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .grid-container-right{
     background-image: url(./images/right.png);
@@ -145,7 +170,16 @@ span{
     border-radius: 10px; 
     height: 425px;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+}
+
+.left-1, .left-2, .grid-container-right > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* horizontally center */
+    justify-content: center; /* vertically center */
+    text-align: center;
 }
 /* Form Area */
 .form{
@@ -153,15 +187,14 @@ span{
     background-image: url(./images/form.png);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
     align-items: center;
-    padding: 70px;
+    padding: 80px 0px;
+    
 }
 .form-int{
     justify-content: center;
-}
-.form h2, .form-int{
-    background-color: transparent;
 }
 .form h2{
     font-size: 50px;
@@ -187,10 +220,14 @@ span{
 }
 .footer-content-2 a, .footer-content-3 a{
     color: rgb(107, 114, 128);
+    padding-bottom: 10px;
 }
 .footer-content-2, .footer-content-3{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+}
+.footer-content-4 img{
+    padding-left: 12px;
 }
 
 /* Responcive Area */
@@ -201,6 +238,9 @@ span{
     .logo-section
     {
         display: flex;
+    }
+    .nav-lists li:not(:last-child){
+        display: none;
     }
     .bannar, .plants-lover
     {
@@ -217,6 +257,7 @@ span{
     .cards{
         grid-template-columns: repeat(2, 1fr);
     }
+
     /* plants-lover css*/
     .plants-lover{
         margin-top: 40px;
@@ -231,16 +272,34 @@ span{
     .grid-container{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        margin-top: 50px;
     }
     .grid-container-left{
         gap: 10px;
-    }
-    .left-1, .left-2, .grid-container-right{
         width: 100%;
-        height: 100%;
+    }
+    .grid-container-right, .left-1, .left-2{
+        width: 100%;
+        height: 200px;
+    }
+    .grid-container-right{
+        margin-top: -16px;
+    }
+
+    .form-int input{
+        padding: 0 15px;
+    }
+    .form-btn{
+        padding: 15px 20px;
     }
     .footer-content{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
+    .footer-content-4 img{
+       padding-top: 12px;
+       padding-left: 0px;
+       margin-right: 10px;
+    }
+
 }
